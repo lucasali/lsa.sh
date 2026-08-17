@@ -10,8 +10,5 @@ import { intro } from '@/data'
     <p class="mt-2 font-geist-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
       {{ intro.byline }}
     </p>
-    <p class="mt-6 max-w-prose text-base leading-relaxed text-foreground/80">
-      {{ intro.bio }}
-    </p>
   </section>
 </template>
