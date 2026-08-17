@@ -34,9 +34,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex items-center text-foreground text-xs font-geist-mono gap-2 leading-none">
-    <Time />
+  <div class="flex items-center text-foreground text-xs font-geist-mono gap-2 leading-none whitespace-nowrap">
+    <Time class="hidden shrink-0 min-[375px]:block" />
     <span class="leading-none">{{ time }}</span>
-    <span class="leading-none">{{ gmtOffset }}</span>
+    <span class="hidden leading-none sm:inline">{{ gmtOffset }}</span>
   </div>
 </template>
