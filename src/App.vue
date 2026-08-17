@@ -1,16 +1,17 @@
 <script setup lang="ts">
+import AboutSection from '@/components/AboutSection.vue'
+import AppFooter from '@/components/AppFooter.vue'
 import AppHeader from '@/components/AppHeader.vue'
-import ExperienceSection from '@/components/ExperienceSection.vue'
 import IntroSection from '@/components/IntroSection.vue'
 import Reveal from '@/components/Reveal.vue'
 import WorkSection from '@/components/WorkSection.vue'
 </script>
 
 <template>
-  <div class="mx-auto max-w-[600px] px-4">
+  <div class="mx-auto flex min-h-dvh max-w-[600px] flex-col px-4">
     <AppHeader />
 
-    <main class="flex flex-col gap-16 py-16">
+    <main class="flex flex-1 flex-col gap-16 py-16">
       <Reveal :delay="0">
         <IntroSection />
       </Reveal>
@@ -20,14 +21,12 @@ import WorkSection from '@/components/WorkSection.vue'
       </Reveal>
 
       <Reveal :delay="0.15">
-        <ExperienceSection />
-      </Reveal>
-
-      <Reveal :delay="0.30">
-        <footer class="font-geist-mono text-xs text-muted-foreground">
-          © {{ new Date().getFullYear() }} Lucas Ali
-        </footer>
+        <AboutSection />
       </Reveal>
     </main>
+
+    <Reveal :delay="0.30" class="pb-8">
+      <AppFooter />
+    </Reveal>
   </div>
 </template>
